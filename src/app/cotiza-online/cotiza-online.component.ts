@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cotiza-online',
-  standalone: false,
+  standalone: true,
 
 
   templateUrl: './cotiza-online.component.html',

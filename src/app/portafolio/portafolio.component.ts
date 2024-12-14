@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-portafolio',
-  standalone: false,
-  
+  standalone: true,
+
   templateUrl: './portafolio.component.html',
   styleUrl: './portafolio.component.css'
 })
