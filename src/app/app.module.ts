@@ -25,7 +25,7 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent },
+      { path: 'home', component: HomeComponent },
       { path: 'servicios', component: ServiciosComponent },
       { path: 'portafolio', component: PortafolioComponent },
       { path: 'nosotros', component: NosotrosComponent },

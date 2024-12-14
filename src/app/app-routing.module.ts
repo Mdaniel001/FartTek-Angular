@@ -9,14 +9,39 @@ import { CotizaOnlineComponent } from './cotiza-online/cotiza-online.component';
 import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'servicios', component: ServiciosComponent },
-  { path: 'portafolio', component: PortafolioComponent },
-  { path: 'nosotros', component: NosotrosComponent },
-  { path: 'contactanos', component: ContactanosComponent },
-  { path: 'cotiza-online', component: CotizaOnlineComponent },
-  { path: 'footer', component: FooterComponent },
-  { path: '**', redirectTo: '' } // Ruta por defecto para manejar URLs no existentes
+
+
+  { path: 'home', 
+    component: HomeComponent 
+  },
+
+  { path: 'servicios',
+     component: ServiciosComponent
+  },
+
+  { path: 'portafolio', 
+    component: PortafolioComponent
+  },
+
+  { path: 'nosotros',
+     component: NosotrosComponent 
+  },
+
+  { path: 'contactanos', 
+    component: ContactanosComponent 
+  },
+
+  { path: 'cotiza-online',
+     component: CotizaOnlineComponent 
+  },
+
+  { path: 'footer',
+     component: FooterComponent
+       
+  }
+
+
+  
 ];
 
 @NgModule({
