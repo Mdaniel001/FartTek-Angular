@@ -1,0 +1,48 @@
+<div class="container">
+    <h1>Cotizador de Sitios Web</h1>
+    <form [ngClass]="cotizadorForm" (ngSubmit)="calcularCotizacion()">
+      <div class="form-group">
+        <label for="nombre">Nombre de la Empresa o Sitio</label>
+        <input type="text" id="nombre" formControlName="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="secciones">Cantidad de Secciones</label>
+        <input type="number" id="secciones" formControlName="secciones" min="1" required>
+      </div>
+      <div class="form-group">
+        <label for="tipo">Tipo de Sitio</label>
+        <select id="tipo" formControlName="tipo" required>
+          <option value="">Seleccione una opción</option>
+          <option value="restaurante">Restaurante</option>
+          <option value="construccion">Construcción</option>
+          <option value="general">Negocio General</option>
+        </select>
+      </div>
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="logo" formControlName="logo">
+        <label for="logo">¿Necesita creación de logo?</label>
+      </div>
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="seo" formControlName="seo">
+        <label for="seo">¿Desea posicionamiento web (SEO)?</label>
+      </div>
+      <button type="submit">Calcular Cotización</button>
+  
+      <div class="button-group">
+        <a routerLink="/" class="home-btn">
+          <button type="button" class="home-btn">Volver a Inicio</button>
+        </a>
+        <a href="https://wa.link/38hrqc" target="_blank" class="whatsapp-btn">
+          <button type="button" class="whatsapp-btn">
+            Conectar con un Asesor
+          </button>
+        </a>
+      </div>
+    </form>
+    <div *ngIf="resultado" id="resultado">
+      <h2>Cotización Estimada</h2>
+      <div class="precio-final">{{ resultado.precioFinal }}</div>
+      <div class="detalles">{{ resultado.detalles }}</div>
+    </div>
+  </div>
+   
