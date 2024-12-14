@@ -13,14 +13,14 @@ import { FooterComponent } from './footer/footer.component';
 @NgModule({
 
   declarations: [
-    AppComponent,
+
     HomeComponent,
     ServiciosComponent,
     PortafolioComponent,
     NosotrosComponent,
     ContactanosComponent,
     CotizaOnlineComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +37,6 @@ import { FooterComponent } from './footer/footer.component';
     ])
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule {}
