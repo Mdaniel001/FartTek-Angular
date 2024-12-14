@@ -6,14 +6,17 @@ import { PortafolioComponent } from './portafolio/portafolio.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
 import { CotizaOnlineComponent } from './cotiza-online/cotiza-online.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }, // Ruta principal
+  { path: '', component: HomeComponent },
   { path: 'servicios', component: ServiciosComponent },
   { path: 'portafolio', component: PortafolioComponent },
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'contactanos', component: ContactanosComponent },
   { path: 'cotiza-online', component: CotizaOnlineComponent },
+  { path: 'footer', component: FooterComponent },
+  { path: '**', redirectTo: '' } // Ruta por defecto para manejar URLs no existentes
 ];
 
 @NgModule({
@@ -21,3 +24,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+
