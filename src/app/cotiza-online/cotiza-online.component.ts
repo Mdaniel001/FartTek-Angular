@@ -9,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './cotiza-online.component.css'
 })
 export class CotizaOnlineComponent {
+cotizadorForm: any;
+resultado: any;
+calcularCotizacion() {
+throw new Error('Method not implemented.');
+}
 
 }

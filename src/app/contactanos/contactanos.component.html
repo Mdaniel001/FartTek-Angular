@@ -1,24 +1,43 @@
 <section class="contact" id="contact">
-    <div class="contact-content">
-      <h2 class="section-title">Contacto</h2>
-      <form class="contact-form" onsubmit="event.preventDefault(); submitForm();">
-        <div class="form-group">
-          <label for="name">Nombre</label>
-          <input type="text" id="name" required="">
-        </div>
-        <div class="form-group">
-          <label for="phone">Teléfono</label>
-          <input type="tel" id="phone" pattern="[0-9]{10}" required="">
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" required="">
-        </div>
-        <div class="form-group">
-          <label for="message">Mensaje</label>
-          <textarea id="message" required=""></textarea>
-        </div>
+  <div class="contact-content">
+    <h2 class="section-title">Contacto</h2>
+    <form class="contact-form" onsubmit="event.preventDefault(); submitForm();" aria-describedby="contact-description">
+      <p id="contact-description">Por favor, llena el formulario para enviarnos un mensaje directo.</p>
+      
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" placeholder="Tu nombre completo" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="phone">Teléfono</label>
+        <input type="tel" id="phone" pattern="[0-9]{10}" title="Por favor, ingrese un número de teléfono válido de 10 dígitos." required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Mensaje</label>
+        <textarea id="message" placeholder="Escribe tu mensaje aquí" required></textarea>
+      </div>
+      
+      <div class="form-actions">
         <button type="submit" class="submit-btn">Enviar Mensaje</button>
-      </form>
+      </div>
+      
+    </form>
+    
+    <div id="form-feedback" class="feedback-message" style="display: none;">
+      ¡Gracias! Nos pondremos en contacto contigo pronto.
     </div>
-  </section>
+    
+    <p>También puedes contactarnos a través de:</p>
+    <ul class="social-links">
+      <li><a href="https://wa.me/1234567890" target="_blank">WhatsApp</a></li>
+      <li><a href="mailto:contacto@empresa.com">Correo electrónico</a></li>
+    </ul>
+  </div>
+</section>
